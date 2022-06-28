@@ -1,10 +1,9 @@
 :root {
-  --dark-one: hsl(204, 12%, 8%);
-  --dark-two: hsl(210, 10%, 15%);
+  --dark-two: hsl(0, 0%, 30%);
   --light-one: hsl(210, 17%, 99%);
-  --background: hsl(140, 43%, 96%);
-  --background-two: hsl(140, 5%, 99%);
-  --button: hsl(153, 40%, 30%);
+  --background-1: hsl(140, 43%, 96%);
+  --primary: hsl(138, 24%, 39%);
+  --background: hsl(52, 94%, 94%);
 }
 
 *,
@@ -17,12 +16,11 @@
 
 body {
   font-size: 16px;
-  font-family: 'EB Garamond', arial;
-  background-color: var(--background-two);
+  font-family: 'Source Sans Pro', arial;
 }
 
 .main-container {
-  margin: 0 15%;
+  padding: 2em 8em;
   background-color: var(--background);
   min-height: 100vh;
   height: auto;
@@ -30,13 +28,17 @@ body {
 
 .heading-container {
   padding-bottom: 1em;
-  margin: 0 4em;
   padding-top: 2em;
-  border-bottom: 2px solid var(--dark-one);
+  border-bottom: 2px solid var(--dark-two);
 }
 
 .heading {
   margin-bottom: 0.5em;
+  color: var(--primary);
+}
+
+.subheading {
+  color: var(--dark-two);
 }
 
 .date {
@@ -46,9 +48,8 @@ body {
 .content-container {
   display: flex;
   gap: 2em;
-  margin: 2em 4em;
+  margin: 2em 0;
   align-items: center;
-  flex: 1 0 auto;
 }
 
 .image-container {
@@ -64,7 +65,7 @@ body {
 
 .content {
   min-width: 400px;
-  max-width: 500px;
+  max-width: 800px;
 }
 
 .subheading {
@@ -84,8 +85,8 @@ body {
 .footer {
   position: fixed;
   bottom: 0;
-  right: 15%;
-  left: 15%;
+  right: 0;
+  left: 0;
   height: 50px;
   padding: 40px;
   display: flex;
@@ -118,14 +119,9 @@ li {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .main-container {
-    margin: 0;
-  }
-
-  .footer {
-    right: 0;
-    left: 0;
+    padding: 2em 4em;
   }
 }
 
@@ -136,5 +132,12 @@ li {
 
   .image-container {
     order: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    min-width: 200px;
+    max-width: 800px;
   }
 }
