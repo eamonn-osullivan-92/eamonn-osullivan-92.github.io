@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Trocchi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/html-css.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+
+    <title>Relative, Absolute, and Fixed positioning</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="image-container">
+        <img src="../images/html-big.jpg" alt="" class="image">
+      </div>
+      <div class="heading-container">
+        <h1 class="heading">What are the differences between relative, absolute, and fixed positioning?</h1>
+        <h2 class="subeading">A look at the CSS positioning property</h2>
+        <h3 class="date">29 June 2022</h3>
+      </div>
+      <div class="content">
+        <p class="answer">The position property in CSS is an important one to understand if you want to have more control over the layout of your webpage. When i first started out with CSS, I ignored this property in favour of using flexbox or grid to position elements on a page. While these are both amazing and powerful features, they will only get you so far.  Take a look at the definitions and differences between the key position values below.</p>
+
+        <h4 class="question">Static:</h4>
+        <p class="answer">Static is the default property. This means that the element is positioned in the normal flow of the document. If an element is static, we are unable to manipulate it's position with the top, left, right, and bottom properties.</p>
+
+        <h4 class="question">Relative:</h4>
+        <p class="answer">Relative positioning means that the element is positioned relative to itself, which might sound confusing at first. What this means is that the the element is positioned in the normal flow of the document, but unlike a static element, we can now manipulate it's position with the top, left, right, and bottom properties. For example, an element that has the following style:</p>
+
+        <code>position: relative;</code><br>
+        <code>top: 20px;</code><br>
+        <code>left: 20px;</code><br>
+
+        <p class="answer">Here the <code>top: 20px;</code> will shift the element 20px down from its standard top position. The <code>left: 20px;</code> will shift the element 20px to the right from its standard left position. See an example of this below; the red box is positioned in the standard document flow, whereas the blue box has the above relative styles applied.</p>
+
+        <div class="example-container">
+          <span class="red"></span>
+          <span class="blue"></span>
+        </div>
+
+        <p class="answer">Finaly, two other things happen when an element is positioned relatively. The first is that it allows us to manipulate the z-index of the element (i.e. setting an element on top of or below another), and secondly it effects the scope of any child elements that are positioned absolutely. I will expand on this next.</p>
+
+        <h4 class="question">Absolute:</h4>
+        <p class="answer">Absolute positioning takes the element out of the standard document flow. Once the element has been taken out of the document flow, it will either placed relative to the webpage itself, or relative to the nearest parent element that has <code>position: relative;</code> applied. This is a very powerful tool that allows us to position an element exactly where we want to, regardless of the position of other elements. Similar to relative positioning, we can use the top, left, right, bottom, z-index properties to acheive this. However instead of moving relative to itself, it will either move relatively to the webpage, , or relative to the nearest parent element that has <code>position: relative;</code> applied.</p>
+
+        <h4 class="question">Fixed:</h4>
+        <p class="answer">When an element has its position value set to fixed, this means that the element is relative to the viewport. This means that the element will stay fixed to the same position regardless if you scroll up or down the page. An example can be seen at the bottom of this page. The footer below has the following code to fix it to the bottom of the screen:</p>
+
+        <code>.footer { <br>
+          position: fixed;  <br>
+          bottom: 0; <br>
+          left: 0;<br>
+          width: 100%;</code>
+
+          <p class="answer">The <code>position: fixed;</code> takes the element out of the standard flow and positions it relative to the viewport, the <code>bottom: 0</code> moves the element 0px off the bottom of the viewport (i.e. the very bottom of the screen), and the <code>left: 0</code> fixes the element 0px off the left hand side of the viewport.</p>
+      </div>
+      <div class="footer">
+        <ul class="nav-items">
+          <li>
+            <a href=""><img class="profile-logo" src="../images/home.png" alt="" /></a></li>
+          </li>
+          <li>
+            <a href="https://github.com/eamonn-osullivan-92"
+            target=”_blank” ><img class="logo" src="../images/github-logo.png" alt="github"
+            /></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/eamonn-o-sullivan-0b1854110"
+            target=”_blank” ><img class="logo" src="../images/linkdn-logo.png" alt="linkedin"
+            /></a>
+          </li>
+          <li>
+            <a href="mailto:eamonnsosullivan@gmail.com"
+            target=”_blank” ><img class="logo" src="../images/email-logo.png" alt="email"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
