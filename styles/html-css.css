@@ -24,6 +24,20 @@ span {
   left: 20px;
 }
 
+.blue::before {
+  content: '';
+  position: absolute;
+  border: 2px solid blue;
+  top: -20px;
+  left: -20px;
+  height: 100px;
+  width: 100px;
+}
+
 code {
   font-weight: 500;
+}
+.code-example {
+  padding-top: 1em;
+  padding-left: 1em;
 }
