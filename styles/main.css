@@ -19,7 +19,7 @@ body {
   font-family: 'Source Sans Pro', arial;
 }
 
-.main-container {
+#main-container {
   padding: 2em 8em;
   background-color: var(--background);
   min-height: 100vh;
@@ -43,7 +43,7 @@ body {
   color: var(--dark-two);
 }
 
-.grid-container {
+#grid-container {
   margin-top: 4em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
