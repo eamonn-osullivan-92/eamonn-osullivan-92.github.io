@@ -158,7 +158,7 @@ li {
 }
 
 @media (max-width: 1400px) {
-  .grid-container {
+  #grid-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
@@ -172,14 +172,14 @@ li {
 } */
 
 @media (max-width: 850px) {
-  .grid-container {
+  #grid-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
   .heading {
     font-size: 2.2rem;
   }
-  .main-container {
+  #main-container {
     padding: 2em 4em;
   }
 }
