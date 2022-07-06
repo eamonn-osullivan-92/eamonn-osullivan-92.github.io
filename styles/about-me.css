@@ -115,6 +115,20 @@ li {
   height: 25px;
 }
 
+
+
+h4.question {
+  margin: 2em;
+}
+
+.codepen-container {
+  margin-bottom: 4em;
+}
+
+.code-example {
+  margin: 4em 0;
+}
+
 @media (max-width: 1300px) {
   .content {
     font-size: 14px;
