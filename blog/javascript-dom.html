@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/javascript-dom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Trocchi&display=swap" rel="stylesheet">
+
+    <title></title>
+  </head>
+<body>
+<div class="container">
+  <div class="image-container">
+    <img class="image" src="../images/marionette-big.jpg" alt="marionette">
+  </div>
+  <div class="heading-container">
+    <h1 class="heading">Javascript & The DOM</h1>
+    <h2 class="subheading">A hypothetical discussion with a non-technical friend</h2>
+    <h3 class="date">7 July 2022</h3>
+  </div>
+  <div class="content">
+    <h3 class="question">What is an analogy to describe JavaScript and its relationship to HTML and CSS?</h3>
+
+    <p class="answer">
+      You could compare the three languages to a Marionette puppet show. The HTML is the structure that forms the set, and the characters inside it, the CSS paints the scene with color and costumes, and Javascript is the puppeteer that is pulling the strings and bringing the set to life. 
+    </p>
+
+    <h3 class="question">
+      Explain control flow and loops using an example process from everyday life:
+    </h3>
+
+    <p class="answer">
+      Control flow in programming refers to the order or flow that a computer reads code. A loop is a break in this flow that will keep running until a particular condition is satisfied. Once this condition is met, the control flow will continue. 
+    </p>
+
+    <p class="answer">
+      An example of this would be cooking pasta for dinner. We can follow the control flow of a recipe, and we might be required to loop through some steps. A very simplified example of this can be seen below:
+    </p>
+
+    <p class="answer">Tomato Pasta (feeds 4) 
+      <ol class="ordered-list">
+        <li class="list-item">Chop onions</li>
+        <li class="list-item">Chop garlic</li>
+        <li class="list-item">Chop Fry onions and garlic in oil</li>
+        <li class="list-item">Add cans of tomatoes - This is an example of a loop, repeat this step until the condition that two cans have been added is met.</li>
+        <li class="list-item">Add pasta to boiling water</li>
+        <li class="list-item">Once pasta is al dente, add to sauce - This is an example of a conditional statement. We are saying IF the pasta is al dente, add to sauce. Otherwise (ELSE) do nothing and wait.</li>
+        <li class="list-item">Serve - This is another loop example, serve pasta into 4 bowls until no pasta remains</li>
+      </ol>
+    </p>
+
+    <h3 class="question">
+      Describe what the DOM is and an example of how you might interact with it.
+    </h3>
+      <p class="answer">The Document Object Model, or the DOM, represents all the elements in an HTML document in a sort of family tree-like structure. We have parent elements, and child elements which are all linked in various ways throughout the document. The power of the DOM comes from its ability to be accessed and manipulated by programming languages such as Javascript. The family tree analogy doesn’t quite work here, but if we wanted to stick with it we could change the name of a parent (element), or the hair color of a child (element). 
+
+        Through this manipulation we can evolve a website from a static page into something fun and interactive. See a couple examples of this below: 
+        </p>
+
+        <h4 class="question">Changing background color:</h4>
+        <p class="answer">Here we can maniputlate the CSS by changing the background colour when a user clicks the button:</p>
+
+        <div class="codepen-container">
+        <p class="codepen" data-height="600" data-theme-id="dark" data-default-tab="js,result" data-slug-hash="poLjrwd" data-user="Monnyosullivan" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 4em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/Monnyosullivan/pen/poLjrwd">
+          DOM Tutorial #1</a> by Eamonn O'Sullivan (<a href="https://codepen.io/Monnyosullivan">@Monnyosullivan</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+      </div>
+      <div class="codepen-container">
+        <h4 class="question">Form Validation:</h4>
+        <p class="answer">Form validation is a great use of DOM manipulation. We can use visual cues to let a user know when they have met any required conditions. See this in action by typing a username below:</p>
+        <p class="codepen " data-height="600" data-theme-id="dark" data-default-tab="js,result" data-slug-hash="jOzbLKa" data-user="Monnyosullivan" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 4em 0; padding: 1em;">
+          <span>See the Pen <a href="https://codepen.io/Monnyosullivan/pen/jOzbLKa">
+          Form Validation #1</a> by Eamonn O'Sullivan (<a href="https://codepen.io/Monnyosullivan">@Monnyosullivan</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+      </div>
+
+
+    <h3 class="question">
+      Explain the difference between accessing data from arrays and objects.
+    </h3>
+
+    <p class="answer">
+      Arrays and objects are two ways we can store data in Javascript, and they come with their differences. An array is a collection of items (data), and each different item has an index (which starts at 0). We can use this index to access different items from the array. An example of an array can be seen below: 
+
+    </p>
+
+    <img src="/images/array.png" alt="array" class="code-example image">
+
+    <p class="answer">
+      An object is similar to an array in that it stores data, however an object has what we call a key value pair. We could look at a car as an object, with keys being the make, model, and color of the car. The values would then be Toyota, Corolla, and red. We can access this information using the keys, which you can see in the below example:
+    </p>
+
+    <img src="/images/object.png" alt="objects" class="code-example image">
+    
+
+    <h3 class="question">
+      Explain what functions are and why they are helpful.
+    </h3>
+
+    <p class="answer">
+      Simply put, a function is a piece of code that performs a task when called upon. Functions are helpful as they let us break our code down into smaller chunks which are easier to work with and maintain. We are also likely to use a function multiple times on a website, so rather than writing the code out each time, we can just call the function again by using the functions name.  
+    </p>
+    <p class="answer">
+      An example of this could be a 4 player game that generates a random number between 1 - 2 to represent a coin flip. All 4 players require the use of this coin flip function, so instead of writing the function out 4 sepereate times for each player, we can write the function once, and call it on each players turn.      Down the track we might decide that instead of a coin flip, we want to use a dice. So instead of updating the function 4 times for each player, we can just update the single function so that the random number generated is now between 1 - 6. 
+    </p>
+
+  </div>
+  <div class="footer">
+    <ul class="nav-items">
+      <li>
+        <a href="https://eamonn-osullivan-92.github.io/"><img class="profile-logo" src="../images/home.png" alt="" /></a></li>
+      </li>
+      <li>
+        <a href="https://github.com/eamonn-osullivan-92"
+        target=”_blank” ><img class="logo" src="../images/github-logo.png" alt="github"
+        /></a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/eamonn-o-sullivan-0b1854110"
+        target=”_blank” ><img class="logo" src="../images/linkdn-logo.png" alt="linkedin"
+        /></a>
+      </li>
+      <li>
+        <a href="mailto:eamonnsosullivan@gmail.com"
+        target=”_blank” ><img class="logo" src="../images/email-logo.png" alt="email"
+        /></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</body>
