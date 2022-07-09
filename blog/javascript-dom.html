@@ -114,6 +114,21 @@
       An example of this could be a 4 player game that generates a random number between 1 - 2 to represent a coin flip. All 4 players require the use of this coin flip function, so instead of writing the function out 4 sepereate times for each player, we can write the function once, and call it on each players turn.      Down the track we might decide that instead of a coin flip, we want to use a dice. So instead of updating the function 4 times for each player, we can just update the single function so that the random number generated is now between 1 - 6. 
     </p>
 
+    <p class="answer">An example of this can be seen below. The syntax will look confusing for someone without any prior knowledge, however the function below utilises some built in math functions to generate a random number. We can then call this function for each player to represent their turn.</p>
+
+    <img src="../code-examples/example-1.png" alt="function example" class="code-example image">
+
+    <p class="answer">The other alternative would be to write the function out four times for each player. </p>
+
+    <img src="../code-examples/example-2.png" alt="function example" class="code-example image">
+
+    <p class="answer">Now if we want to change our function to represent a dice (random number between 1 - 6), we would be faced with the following options depending on how we set up our code. If we set up our code like the first example, we only have to update the function once. If we set up our code like the second example, we would have to update the code four times for each player. See the updated code below:</p>
+
+    <img src="../code-examples/example-3.png" alt="" class="code-example image">
+
+    <p class="answer">
+      This update is admittedly very small in context, however most web applications will have far more complicated functions, and far more complicated updates, so the theory behind this practice is sound.
+    </p>
   </div>
   <div class="footer">
     <ul class="nav-items">
