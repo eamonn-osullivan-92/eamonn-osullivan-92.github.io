@@ -114,9 +114,8 @@ body {
 
 .card-heading {
   color: var(--primary);
-  font-family: 'madeMellow', serif;
+  font-family: 'Source Sans Pro', serif;
   font-weight: bold;
-  letter-spacing: 2px;
   font-size: 1.4rem;
   margin-bottom: 5px;
   margin-top: 0;
