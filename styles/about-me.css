@@ -6,6 +6,20 @@
   --background: hsl(52, 94%, 94%);
 }
 
+@font-face {
+    font-family: 'madeMellow';
+    src: url(../fonts/mademellowpersonaluse-regular-webfont.woff) format('woff');
+    src: url(../fonts/mademellowpersonaluse-regular-webfont.woff2) format('woff2');
+    
+  }
+  @font-face {
+    font-family: 'madeMellow';
+    src: url(../fonts/mademellowpersonaluse-bold-webfont.woff) format('woff');
+    src: url(../fonts/mademellowpersonaluse-bold-webfont.woff2) format('woff2');
+    font-weight: bold;
+  }
+  
+
 *,
 *::after,
 *::before {
@@ -33,6 +47,10 @@ body {
 }
 
 .heading {
+    font-family: 'madeMellow', serif;
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 2px;
   margin-bottom: 0.5em;
   color: var(--primary);
 }
