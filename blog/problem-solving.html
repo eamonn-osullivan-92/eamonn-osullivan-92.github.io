@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Trocchi&display=swap" rel="stylesheet">
+
+    <title></title>
+  </head>
+<body>
+<div class="container">
+  <div class="image-container">
+    <img class="image" src="../images/good-will-hunting.jpeg" alt="have a good day">
+  </div>
+  <div class="heading-container">
+    <h1 class="heading">Problem Solving</h1>
+    <h2 class="subheading">Tell your non-tech friend a story about a time you...</h2>
+    <h3 class="date">13 July 2022</h3>
+  </div>
+  <div class="content">
+
+    <h3 class="question">
+        1. Were blocked on a simple problem:
+    </h3>
+
+    <p class="answer">
+        In the last sprint, I was working through the stretch material on the Javascript Cafe application. One task had us creating a transaction history log that would log each transaction. Another task had us create a function that would create a small probability that a customer would demand a refund and leave a review. I had both these functions working in isolation, however I decided I wanted to show this refund transaction as a negative in the transaction history log. 
+    </p>
+
+    <p class="answer">
+        In my head this sounded simple enough, so I got to work on it. My initial unhappyCustomer function can be seen below. It generates a random number between 0 and 1, and if that number is below 0.1 (a 10% chance), it will call a getRandomReview function that gets a random review from an array and displays it in the alert box. The function then deducts the sale total from the last transaction in the transactionHistory array. 
+    </p>
+
+    <img src="../code-examples/unhappy-original.png" alt="" class="content-image">
+
+    <p class="answer">
+        My first instinct was to create a copy of the transactionHistory array, so I achieved this by creating a new variable called transactionHistoryClone that equals transactionHistory.slice(). This slice function returns a copy of the entire array as I have not included a start or end index as parameters. I then created a refund variable and set it to the last transaction in the cloned array, before making the saleTotal for that transaction a negative number. All I needed to do now was push it back into the original transactionHistory array.
+
+    </p>
+    <img src="../code-examples/unhappy-1.png" alt="" class="content-image">
+    
+    <p class="answer">
+    The result was this:
+    </p>
+
+    <img src="../code-examples/unhappy-result-1.png" alt="" class="content-image">
+
+    <p class="answer">
+        Unfortunately in updating the refund transaction to a negative, I have indirectly updated the original transaction which means there are two negative transactions in the log. I added a few console logs to the function to see what variables were changing and at what stage, and this confirmed that both the clone and the original were being updated to show the negative transaction. I was stumped on this for a little bit, so I took to google to see what I could find out. 
+    </p>
+    <p class="answer">
+         A quick google search led me to the concept of shallow and deep copies. A shallow copy method such as the slice() method I used creates a copy of the array, but still references the variables in the original array. So updating any variable in my cloned object will update the same variable in the original. Instead I needed to make a deep copy, which would clone the object without direct references to the original. I used the structuredClone() method which resulted in the below code: 
+    </p>
+
+    <img src="../code-examples/unhappy-2.png" alt="" class="content-image">
+    
+    <p class="answer">
+    The result was this:
+    </p>
+
+    <img src="../code-examples/unhappy-result-2.png" alt="" class="content-image">
+
+    <p class="answer">It's now working as intended which is always a satisfying feeling. Even better, I now understand the difference between shallow and deep copies, and methods we can use to create these. </p>
+
+
+    <h3 class="question">
+
+        <h3 class="question">2. Elegantly solved a problem.</h3>
+
+        <p class="answer">
+            The super_fizzbuzz kata asked us to write a function that takes an array of numbers as its input, and return a fizzbuzzed array. Prior to this question we had written a fizzbuzz function that takes a number and returns the correct fizzbuzz properties depending on whether the number is divisible by 15, 5 or 3. 
+        </p>
+    
+        <p class="answer">
+            Because we already had the fizzbuzz function, my initial approach to the super_fizzbuzz function was to write a for loop, and call the fuzzbuzz function on the array[i] element for each iteration. This would have been an effective way to approach the problem, however before I started writing the function I had a better idea. 
+        </p>
+    
+        <p class="answer">
+            Fortunately prior to this kata we had been researching javascript methods, so the idea of using array.map() popped into my head. The map function loops over each element in an array and calls a user supplied function on that element. My problem solving technique here was essentially trial and error. At first I didn't really think it was going to work, maybe because it seemed too simple for a function with super in the title, but I gave it a crack anyway. The end result here is exactly the same as it would be with a for loop, but it is always satisfying when we can solve something with one line of code. (note: you can see i slightly strayed from my original pseudocode, which is absolutely fine. Writing the function out in plain english helped me arrive at the map() idea).
+        </p>
+    
+        <img src="../code-examples/super_fizzbuzz.png" alt="fizzbuzz" class="content-image-small">
+
+    <h3 class="question">
+        Problem Solving Techniques and Processes
+    </h3>
+
+    <p class="answer">
+        My problem solving process, as you can see above, involves a lot of google, and a lot of trial and error. These are generally my go-to's and if I am still struggling I will look elsewhere. 
+    </p>
+
+
+    <p class="answer">
+        Trial and error usually starts with me following my gut instinct and digging into whatever my first thought is. Oftentimes as you start to write code this thought can change or evolve into something completely different, but it gets the problem solving juices flowing and provides you with something testable. If my trials result in error, my next step would be to read the  error message. Is something undefined? Am I trying to call a function that is not a function? Maybe it's a syntax error. These messages are great as they point me to the line of code that is triggering the error, and lets me know what is not working. 
+    </p>
+
+
+    <p class="answer">
+        Console.logging is another technique I frequently use. Being able to log a variable or object after its creation, or after it has been manipulated by another function, is a great way to ensure your data is correct. Strategic placement of console.logs inside conditions or loops can also provide a lot of information about the flow of the application and whether or not these conditions are working as expected. 
+    </p>
+
+    <p class="answer">
+        Something I have neglected a bit in the past is Pseudocode. Pseudocode refers to writing out the process and purpose of a function in plain english before writing the code. This helps provide a foundation for you to begin writing the code, and helps you keep inline with what needs to be achieved. It is easy to overcomplicate functions and try to do too much, so the pseudocode can be used as a guide of what needs to be included in the function. Pseudocode is something I am trying to do more of since I started a Dev Academy. 
+    </p>
+
+    <p class="answer">
+        Googling is probably the most used problem solving technique. Once the trial and error has failed, or if I am just at a loss for where to start, I will head to Google. Programming isn’t a new phenomenon, chances are thousands of programmers have run into the same problems as you. Fortunately a lot of these problems and solutions are documented on sites like stackoverflow, or various programming related blog websites. 
+    </p>
+
+    <p class="answer">
+        One of the best parts about being a part of Dev Academy, is that when all of the above fails, I can easily ask any of the other students and facilitators for a hand and they will be happy to help. Having a good support network, and peers that you can bounce ideas off is one of the most useful resources a programmer can have. 
+    </p>
+
+  </div>
+  <div class="footer">
+    <ul class="nav-items">
+      <li>
+        <a href="https://eamonn-osullivan-92.github.io/"><img class="profile-logo" src="../images/home.png" alt="" /></a></li>
+      </li>
+      <li>
+        <a href="https://github.com/eamonn-osullivan-92"
+        target=”_blank” ><img class="logo" src="../images/github-logo.png" alt="github"
+        /></a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/eamonn-o-sullivan-0b1854110"
+        target=”_blank” ><img class="logo" src="../images/linkdn-logo.png" alt="linkedin"
+        /></a>
+      </li>
+      <li>
+        <a href="mailto:eamonnsosullivan@gmail.com"
+        target=”_blank” ><img class="logo" src="../images/email-logo.png" alt="email"
+        /></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>

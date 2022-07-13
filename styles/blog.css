@@ -61,16 +61,17 @@ body {
 }
 
 .heading {
-  margin-bottom: 1em;
   color: var(--primary);
   font-family: 'madeMellow', serif;
   font-weight: bold;
+  font-size: 3rem;
   letter-spacing: 2px;
 }
 
 .subheading {
   color: var(--dark-two);
   font-weight: 600;
+  font-size: 1.4rem;
 }
 
 .date {
@@ -167,6 +168,15 @@ li {
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.content-image-small {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 @media (max-width: 1400px) {
