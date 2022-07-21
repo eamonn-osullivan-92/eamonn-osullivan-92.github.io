@@ -84,9 +84,20 @@ body {
 }
 
 .question {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 1em;
   color: var(--dark-two);
+}
+
+.content-heading {
+    color: var(--primary);
+    font-family: 'madeMellow', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+.content-heading:last-of-type {
+    padding-top: 1em;
 }
 
 .content-subheading {
@@ -94,6 +105,10 @@ body {
   margin-left: 1em;
   color: var(--dark-two);
   font-weight: 600;
+}
+
+.secondary-question {
+    font-style: italic;
 }
 
 .answer {
@@ -153,6 +168,7 @@ li {
   margin-left: 2em;
   color: var(--dark-two);
 }
+
 .list-item {
   padding-top: 10px;
 }
